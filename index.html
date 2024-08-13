@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сборка автомобиля</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #carImage, #title, #instructions, #carCompleteMessage {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="ec-cart-widget"></div>
+    <div>
+        <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?107204045&data_platform=code&data_date=2024-08-13" charset="utf-8"></script>
+        <script type="text/javascript">Ecwid.init();</script>
+    </div>
+    
+    <div id="main-content">
+        <h1 id="title">Собери свой автомобиль</h1>
+        <p id="instructions">Кликните на разные части автомобиля, чтобы добавить детали в корзину</p>
+        <div id="carContainer">
+            <img src="car.png" usemap="#carMap" alt="carImage" id="carImage">
+            <map name="carMap">
+                <area title="rearWheel" href="#" shape="circle" coords="324,431,109" onclick="addToCart(686878536)">
+                <area title="frontWheel" href="#" shape="circle" coords="1037,431,109" onclick="addToCart(686878535)">
+                <area title="rearWindow" href="#" shape="poly" coords="298,228,550,228,537,125,416,159" onclick="addToCart(686878533)">
+                <area title="frontWindow" href="#" shape="poly" coords="593,227,847,230,690,155,584,126" onclick="addToCart(686878532)">
+                <area title="body" href="#" shape="poly" coords="206,238,1060,237,1239,299,1263,363,1245,456,1163,462,1158,393,1099,316,1006,302,926,353,901,466,450,461,443,373,379,308,276,303,203,381,192,456,38,421,10,374,39,286" onclick="addToCart(686878538)">
+            </map>
+        </div>
+    </div>
+
+    <div id="carCompleteMessage">Вы собрали автомобиль!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
